@@ -1,8 +1,21 @@
+import Link from 'next/link';
 import { mockOrders, mockUsers, materials } from '@/lib/mock';
 
 export default function AdminPage() {
   return (
     <main style={{ display: 'grid', gap: 16 }}>
+      <nav style={{ display: 'flex', gap: 8 }}>
+        <Link href="/admin/products" style={{ border: '1px solid #ccc', padding: '8px 12px', borderRadius: 10 }}>
+          商品管理
+        </Link>
+        <Link href="/admin/orders" style={{ border: '1px solid #ccc', padding: '8px 12px', borderRadius: 10 }}>
+          订单管理
+        </Link>
+        <Link href="/admin/users" style={{ border: '1px solid #ccc', padding: '8px 12px', borderRadius: 10 }}>
+          用户管理
+        </Link>
+      </nav>
+
       <section className="panel">
         <h1 className="section-title">后台总览</h1>
         <p className="subtle">这一页先把你最关心的三个后台能力放出来：商品、订单、用户。</p>
